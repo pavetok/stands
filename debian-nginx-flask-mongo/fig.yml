@@ -1,0 +1,12 @@
+app:
+    build: .
+    volumes:
+        - .:/repo
+    ports:
+        - "80:80"
+        - "443:443"
+    links:
+        - mongodb
+
+mongodb:
+    image: mongo
